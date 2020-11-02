@@ -1,0 +1,20 @@
+import express from 'express'
+import authentication from '../middlewares/auth'
+
+import {
+  createProduct,
+  findById,
+  deleteProduct,
+  findAll,
+  updateProduct,
+} from '../controllers/product'
+
+const router = express.Router()
+
+router.get('/', findAll)
+router.get('/:productId', findById)
+router.put('/:productId', updateProduct)
+router.delete('/:productId', deleteProduct)
+router.post('/', createProduct)
+
+export default router
