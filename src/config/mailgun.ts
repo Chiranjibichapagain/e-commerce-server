@@ -1,7 +1,6 @@
-var api_key = '4c0f80a3e94a3759cd2332a6386ed01b-2fbe671d-af985bf6'
+import { MAILGUN_DOMAIN, MAILGUN_API_KEY } from '../util/secrets'
 
-var domain = 'sandboxd6efefb904e44202a135d0df8259d356.mailgun.org'
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain })
+var mailgun = require('mailgun-js')({ apiKey: MAILGUN_API_KEY, domain: MAILGUN_DOMAIN })
 
 const mailer = (email: any, token: any) => {
   var data = {

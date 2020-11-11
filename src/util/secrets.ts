@@ -17,6 +17,8 @@ export const SESSION_SECRET = process.env['SESSION_SECRET'] as string
 export const JWT_SECRET = process.env['JWT_SECRET'] as string
 export const GOOGLE_ID = process.env['GOOGLE_ID'] as string
 export const GOOGLE_SECRET = process.env['GOOGLE_SECRET'] as string
+export const MAILGUN_DOMAIN = process.env['MAILGUN_DOMAIN'] as string
+export const MAILGUN_API_KEY= process.env['MAILGUN_API_KEY'] as string
 export const MONGODB_URI = (prod
   ? process.env['MONGODB_URI']
   : process.env['MONGODB_URI_LOCAL']) as string
